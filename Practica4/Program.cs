@@ -9,7 +9,8 @@ namespace Practica4
         {
             DTOProductos dTOProductos = new DTOProductos();
             var ListaDeProductos = dTOProductos.GetListProductos();
-
+            //ABSOLUTAMENTE TODOS LOS EJERCICIOS FUERON HECHOS A MANO POR MI, NO HAY NADA DE IA EN ESTA TAREA
+            //GRACIAS POR LA RECOMENDACION EN LA TAREA ANTERIOR, NO PUEDO DEPENDER DE LA IA - GRACIAS
 
             // 1. Obtener todos los productos de la lista.
             /*
@@ -164,6 +165,7 @@ namespace Practica4
 
             Console.WriteLine(productos.Count());*/
             // 20. Verificar si todos los productos tienen stock mayor a 5.
+
             // 21. Contar cuántos productos hay en la categoría "Audio".
             /*
              * var productos = from p in ListaDeProductos
