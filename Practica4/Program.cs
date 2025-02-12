@@ -165,7 +165,20 @@ namespace Practica4
 
             Console.WriteLine(productos.Count());*/
             // 20. Verificar si todos los productos tienen stock mayor a 5.
+            /*
+            var productos = (from p in ListaDeProductos
+                            where p.Stock < 5 
+                            select p).Count();
 
+            if (productos > 0)
+            {
+                Console.WriteLine("hay productos con stock menor a 5");
+            }
+            else
+            {
+                Console.WriteLine("todos los productos tienen stock mayor a 5");
+            }
+            */
             // 21. Contar cuántos productos hay en la categoría "Audio".
             /*
              * var productos = from p in ListaDeProductos
@@ -186,6 +199,10 @@ namespace Practica4
             }
                 */
             // 23. Obtener la categoría con más productos
+            /*
+                        var productos = ListaDeProductos.GroupBy(p => p.Categoria).OrderByDescending(a => a.Count()).FirstOrDefault();
+                        Console.WriteLine(productos.FirstOrDefault());
+            */
             // 24. Obtener el stock total de todos los productos.
             /*
                         var productos = ListaDeProductos.Sum(p => p.Stock);
@@ -209,8 +226,30 @@ namespace Practica4
                         }
             */
             // 27. Filtrar los productos cuya descripción contenga la palabra "pantalla".
+            /*
+             var productos = from p in ListaDeProductos
+                            where p.Descripcion.Contains("pantalla")
+                            select p.Descripcion;
+
+            foreach (var item in productos)
+            {
+                Console.WriteLine(item);
+            }
+            */
             // 28. Obtener el promedio de stock de los productos de la categoría "Almacenamiento".
             // 29. Obtener los productos creados en una fecha específica (20/12/2022).
+            /*
+            DateTime time = new DateTime(2025,12,20);
+
+            var productos = from p in ListaDeProductos
+                            where p.FechaCreacion == time
+                            select p;
+
+            foreach (var item in productos)
+            {
+                Console.WriteLine(item.ToString());
+            }
+            */
             // 30. Obtener los productos cuya ID sea par.
             // 31. Obtener los productos cuya ID sea impar.
             // 32. Obtener los productos cuyo precio tenga un decimal mayor a .50.
@@ -224,6 +263,16 @@ namespace Practica4
             */
             // 34. Obtener los productos cuyo stock sea un número primo.
             // 35. Obtener los productos cuyo nombre contenga la palabra "Pro".
+            /*           
+                        var productos = from p in ListaDeProductos
+                                        where p.Nombre.Contains("Pro")
+                                        select p.Nombre;
+
+                        foreach (var item in productos)
+                        {
+                            Console.WriteLine(item);
+                        }
+            */
             // 36. Obtener los productos cuyo stock sea un múltiplo de 5.
             // 37. Obtener los productos que tengan una descripción con más de 20 caracteres.
             /*
